@@ -1,15 +1,3 @@
-/**
-* Template Name: Yummy - v1.1.0
-* Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# Set main reusable colors and fonts using CSS variables
-# Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
---------------------------------------------------------------*/
-/* Fonts */
 :root {
   --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-primary: "Amatic SC", sans-serif;
@@ -34,6 +22,10 @@
 body {
   font-family: var(--font-default);
   color: var(--color-default);
+}
+
+body::-webkit-scrollbar {
+  width: 0;
 }
 
 a {
@@ -158,34 +150,47 @@ section {
 --------------------------------------------------------------*/
 .scroll-top {
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 99999;
-  background: var(--color-primary);
-  width: 44px;
-  height: 44px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.scroll-top i {
-  font-size: 24px;
+  right: 1rem;
+  bottom: 0.8rem;
+  z-index: 997;
+  height: 5rem;
+  width: 5rem;
+  background-color: var(--color-primary);
   color: #fff;
-  line-height: 0;
+  font-size: 2.2rem;
+  border: 0;
+  border-radius: 50%;
 }
-
 .scroll-top:hover {
   background: #ec2727;
   color: #fff;
 }
-
-.scroll-top.active {
-  visibility: visible;
-  opacity: 1;
+.cart {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 996;
+  background: #fff;
+  border-radius: 50px;
+  color: #000;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition: all ease 1s;
+  box-shadow: 3px 3px 15px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 15rem;
+  height: 4.5rem;
 }
-
+.cart i {
+  margin-left: 4rem;
+  cursor: pointer;
+}
+.item-button {
+  border: 0;
+  border-radius: 50%;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1701,4 +1706,26 @@ section {
 
 .footer .credits a {
   color: #fff;
+}
+
+.credits img {
+  width: 18px;
+}
+
+.menu-container {
+  height: 70vh;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.menu-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.menu-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.25);
+  border-radius: 5px;
 }
